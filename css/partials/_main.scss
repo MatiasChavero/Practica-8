@@ -1,0 +1,401 @@
+html,body{overflow-x:hidden !important}
+
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Sora', 'sans-serif';
+    color: var(--color-text);
+}
+
+// Container
+.container {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include breakpoint(phone) {
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include breakpoint(tablet-lg) {
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include breakpoint(desktop-lg) {
+        max-width: 1212px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.site-header {
+    margin-top: 30px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                img {
+                    width: 90px;
+                    height: 25px;
+                    @include breakpoint(phone) {
+                        width: 140px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        .navigation {
+            a {
+                margin-right: 5px;
+                padding: 6px 6px;
+                font-size: 8px;
+                font-weight: 800;
+                @include breakpoint(phone) {
+                    margin-right: 15px;
+                    padding: 10px 10px;
+                    font-size: 14px;
+                    font-weight: 800;
+                }
+            }
+            a:hover {
+                background-color: #000000;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.first-page {
+    margin-top: 25px;
+    @include breakpoint(phone) {
+        margin-top: 50px;
+    }
+    .container {
+        .title {
+            background-image: url('../Fotos/fondo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            &:before {
+                left: 0;
+                top: 0;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+                background-color: rgba(0,0,0, 0.3);
+                position: absolute;
+            }
+            h2 {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                font-size: 24px;
+                font-weight: 300;
+                color: #FFFFFF;
+                text-align: center;
+                position: relative;
+                z-index: 500;
+                @include breakpoint(phone) {
+                    padding-top: 150px;
+                    padding-bottom: 150px;
+                    font-size: 50px;
+                    font-weight: 300;
+                    color: #FFFFFF;
+                    text-align: center;
+                    position: relative;
+                    z-index: 500;
+                }
+                @include breakpoint(tablet-lg) {
+                    padding-top: 200px;
+                    padding-bottom: 200px;
+                    font-size: 72px;
+                    font-weight: 300;
+                    color: #FFFFFF;
+                    text-align: center;
+                    position: relative;
+                    z-index: 500;
+                }
+            }
+        }
+        .description {
+            margin-top: 40px;
+               @include breakpoint(phone) {
+                margin-top: 80px;
+                display: flex;
+                align-items: center;
+            }
+            .description-1 {
+                width: 100%;
+                @include breakpoint(phone) {
+                    width: 50%;
+                }
+                h3 {
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-bottom: 29px;
+                    @include breakpoint(phone) {
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin-bottom: 0px;
+                        margin-right: 15px;
+                    }
+                    @include breakpoint(tablet-lg) {
+                        font-size: 30px;
+                        font-weight: 400;
+                        line-height: 38px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .description-2 {
+                width: 100%;
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.photos {
+    margin-top: 47px;
+    @include breakpoint(phone) {
+        margin-top: 80px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(phone) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include breakpoint(tablet-lg) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .album {
+            .photos-1 {
+                width: 167px;
+                height: 140px;
+                @include breakpoint(phone){
+                    width: 250px;
+                    height: 200px;
+                }
+                @include breakpoint(tablet-lg) {
+                    width: 309px;
+                    height: 258px;
+                }
+            }
+            .photos-2 {
+                width: 342px;
+                height: 250px;
+                @include breakpoint(phone) {
+                    width: 590px;
+                    height: 350px;
+                }
+                @include breakpoint(tablet-lg) {
+                    width: 631px;
+                    height: 464px;
+                }
+            }
+        }
+    }
+}
+
+.opinion {
+    margin-top: 70px;
+    @include breakpoint(phone) {
+        margin-top: 80px;
+    }
+    .container {
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 29px;
+            @include breakpoint(phone) {
+                font-size: 30px;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+        .opinion-people {
+            @include breakpoint(phone) {
+                display: flex;
+            }
+            .opinion-people-1 {
+                background-color: #000000;
+                margin-right: 16px;
+                padding: 71px 49px 0px 45px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                @include breakpoint(phone) {
+                    background-color: #000000;
+                    margin-right: 16px;
+                    padding: 71px 49px 0px 45px;
+                    border-radius: 10px;
+                }
+                .opinion-people-2 {
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-bottom: 26px;
+                }
+                .people {
+                    display: flex;
+                    .people-img {
+                        padding-bottom: 35px;
+                        margin-right: 32px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 30px;
+                        }
+                    }
+                    .people-name {
+                        margin-top: 10px;
+                        .name {
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            font-weight: 400;
+                            margin-bottom: 6px;
+                        }
+                        .city {
+                            font-size: 11px;
+                            color: #999999;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    .container {
+        @include breakpoint(phone) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-1 {
+            @include breakpoint(phone) {
+                display: flex;
+                align-items: center;
+            }
+            img {
+                width: 75px;
+                height: 21px;
+                margin-bottom: 11px;
+                @include breakpoint(phone) {
+                    width: 70px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+                @include breakpoint(tablet-lg) {
+                    width: 100px;
+                    height: 28px;
+                    margin-right: 35px;
+                }
+            }
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                color: #000000;
+                margin-bottom: 20px;
+                @include breakpoint(phone) {
+                    font-size: 10px;
+                    font-weight: 400;
+                    color: #000000;
+                    margin-bottom: 0px;
+                }
+                @include breakpoint(tablet-lg) {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #000000;
+                }
+            }
+        }
+        .footer-2 {
+            margin-bottom: 20px;
+            @include breakpoint(phone) {
+                margin-bottom: 0px;
+            }
+            @include breakpoint(tablet-lg) {
+
+            }
+            .img-1 {
+                width: 11px;
+                height: 18px;
+                margin-right: 17px;
+                @include breakpoint(phone) {
+                    width: 7px;
+                    height: 13px;
+                    margin-right: 8px;
+                }
+                @include breakpoint(tablet-lg) {
+                    width: 9px;
+                    height: 15px;
+                    margin-right: 17px;
+                }
+            }
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 17px;
+                @include breakpoint(phone) {
+                    width: 13px;
+                    height: 13px;
+                    margin-right: 8px;
+                }
+                @include breakpoint(tablet-lg) {
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 17px;
+                }
+            }
+        }
+        .footer-3 {
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                color: #000000;
+                margin-right: 5px;
+                @include breakpoint(phone) {
+                    font-size: 10px;
+                    font-weight: 400;
+                    color: #000000;
+                    margin-right: 5px;
+                }
+                @include breakpoint(tablet-lg) {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #000000;
+                    margin-right: 5px;
+                }
+            }
+            img {
+                width: 93px;
+                height: 14px;
+            }
+        }
+    }
+}
